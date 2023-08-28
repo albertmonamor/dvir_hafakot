@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NGMF76D5');</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRNXT66MNK"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-VRNXT66MNK');
+        </script>
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="static/css/color.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Noto+Serif+Hebrew:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/11e3bcf364.js" crossorigin="anonymous"></script>
+    
+        <title>דרור הפקות</title>
+    </head>
+<body>
+    <!-- <div class="background-hafakot"></div> -->
+    <div class="welcome">
+        <div class="logo" onclick="function _(){location.href='/'};_()"></div>
+        <div class="welcome-title">
+            דרור הפקות
+            <span class="subtitle">ציוד להשכרה | הפקת אירועים</span>
+        </div>
+
+    </div>
+    <div class="map-and-descripton mrgn-10">
+        <div class="mdescription">
+            <div class="start-text">
+                <span> אירוע עם חוויה</span>
+            </div>
+            <div class="middle-text">
+                <span>ברוכים הבאים לדרור הפקות</span>
+                <span class="panch-text">
+                    מקום שבו איכות הציוד לאירוע שלכם חשובה לנו 
+                </span>
+            </div>
+        </div>
+        <div class="mmap">
+            <a class="map-item" href="#ourequipments">
+                <div class="rent-gifs g-hagbara">
+                </div>
+                <span>הציוד שלנו</span>
+            </a>
+            <a class="map-item" href="contact">
+                <div class="rent-gifs g-plus"></div>
+                <span>הזמן עכשיו</span>
+            </a>
+            <a class="map-item" href="#master">
+                <div class="rent-gifs g-ask"></div>
+                <span>מה יש לנו</span>
+            </a>
+        </div>
+    </div>
+    <div class="mrgn-10 after-welcome">
+        <div class="main-description">
+            <div class="description flex-right" id="for0">
+                <div class="title">
+                    השכרת ציוד
+                </div>
+                <div class="sep-title">
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                </div>
+                <div class="desc">
+                    {{ production }}
+                </div>
+                <div class="button-base button-home-zibi">
+                    <button class="button-renting" type="button" onclick="startTalk(1)">
+                         
+                        <i class="fa-solid fa-phone fa-fade"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="description flex-right" id="for1">
+                <div class="title">
+                    תכנון אירוע
+                </div>
+                <div class="sep-title">
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                </div>
+                <div class="desc">
+                    {{ amplification }}
+                </div>
+                <div class="button-base button-home-zibi">
+                    <button class="button-renting" type="button" onclick="startTalk(0)">
+                        <i class="fa-brands fa-whatsapp fa-fade"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="action-btn-leads">
+            <div class="button-base btn-no-phone">
+                <button class="button-renting button-cs" type="button" onmouseleave="remove_anim('for0')" onmouseover="animationCards('for0')" onclick="startTalk(1)">
+                    <i class="fa-solid fa-phone fa-fade"></i>
+                </button>
+            </div>
+            <div class="button-base btn-no-phone">
+                <button class="button-renting button-cs" type="button"  onmouseleave="remove_anim('for1')" onmouseover="animationCards('for1')"  onclick="startTalk(0)">
+                     
+                    <i class="fa-brands fa-whatsapp fa-fade"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="master-dvir" id="master">
+        <div class="title-master-equipment-offer">
+            אז מה יש לנו
+            <span class="zibiq">?</span>
+        </div>
+        <div class="parent-box">
+            <div class="box-equipment">
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span class="title">ציוד</span>
+                <div class="body">
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        הגברה איכותית לכל אירוע
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        הצללות לאירועים פרטיים ועסקיים
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        פינות ישיבה מפנקות ונוחות
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        קייטרינג שף  יוקרתי לאירועים
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        פרוזקטורים ותאורה צבעונית לכל אירוע
+                    </span>
+                </div>
+            </div>
+            
+            <div class="box-equipment">
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span class="title">שירות</span>
+                <div class="body">
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        הובלה פירוק והרכבה מקצועית
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        זמינות לכל אורך האירוע
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        אירוע בהתאם לכל הצרכים שלך
+                    </span>
+                </div>
+            </div>
+            <div class="box-equipment">
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span class="title">מחירים שלנו</span>
+                <div class="body">
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        חבילות אירועים משתלמות
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        המחירים כוללים את השביעות רצון שלך
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                        מחירים טובים ללקוחות חוזרים
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slide" id="ourequipments">
+        <div class="title-slide">
+            הציוד שלנו
+        </div>
+        <div class="slide-equipments mrgn-10" id="equipments">
+            {% for x in range(1, 7) %}
+                <div class="equipment" tabindex="0">
+                    <div class="ebody">
+                        <img src="/static/slides-pic/n{{ x }}.jpg">
+                    </div>
+                    <div class="footer-img">
+                        <div class="title">
+                            <span>{{ img_text[x].t }}</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <div class="footer">
+                            <span class="img-desc">{{img_text[x].d}}</span>
+                            <div class="within-for-client">
+                                {% for star in img_text[x].s %}
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>{{ star }}</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="after-all-footer" id="footer-home">
+        <div class="reversed">
+            כל הזכויות שמורות 
+            <span class="name">
+                דרור הפקות
+            </span>
+            <i class="fa-solid fa-circle"></i> 
+            <span class="owner">
+            נבנה ע"י אברהם סבן
+            </span>
+        </div>
+    </div>
+    <div class="short-contact-fixed">
+        <button  class="btn-short-contact" type="button" onclick="startTalk(1)"> 
+            <i class="fa-solid fa-phone"></i>
+        </button>
+        <button class="btn-short-contact green non-animation" type="button" onclick="startTalk(0)">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGMF76D5"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+<script src="static/js/home.js"></script>
+<script src="static/js/contact.js"></script>
+
+</html>

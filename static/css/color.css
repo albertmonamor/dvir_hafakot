@@ -1,0 +1,9 @@
+:root {
+    /* home color */
+    --home-bg-0: rgb(255, 252, 242) !important;
+    --home-bg-1: rgb(247 245 255/1);
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    /* bg of slider */
+    --slide-bg: rgb(19, 15, 8);
+}
