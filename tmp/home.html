@@ -23,11 +23,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Noto+Serif+Hebrew:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/11e3bcf364.js" crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="static/fico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/fico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/fico/favicon-16x16.png">
+
     
         <title>דרור הפקות</title>
     </head>
 <body>
-    <!-- <div class="background-hafakot"></div> -->
     <div class="welcome">
         <div class="logo" onclick="function _(){location.href='/'};_()"></div>
         <div class="welcome-title">
@@ -64,64 +67,68 @@
             </a>
         </div>
     </div>
-    <div class="mrgn-10 after-welcome">
+    <div class="after-welcome">
         <div class="main-description">
-            <div class="description flex-right" id="for0">
+            <div class="description">
                 <div class="title">
-                    <img src="/static/call1-home.gif" alt="28.8.2023">
                     <span>השכרת ציוד</span>
-                    
-                </div>
-                <div class="sep-title">
-                    <i class="fa-solid fa-code-commit"></i>
-                    <i class="fa-solid fa-code-commit"></i>
-                    <i class="fa-solid fa-code-commit"></i>
-                </div>
-                <div class="desc">
-                    {{ production }}
-                </div>
-                <div class="button-base button-home-zibi">
-                    <button class="button-renting" type="button" onclick="startTalk(-24234)">
-                         
-                        <i class="fa-solid fa-phone fa-fade"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="description flex-right" id="for1">
-                <div class="title">
-                    <img src="/static/whatsapp-home.gif" alt="28.8.2023">
-                    <span>תכנון אירוע</span>
-                </div>
-                <div class="sep-title">
-                    <i class="fa-solid fa-code-commit"></i>
-                    <i class="fa-solid fa-code-commit"></i>
-                    <i class="fa-solid fa-code-commit"></i>
                 </div>
                 <div class="desc">
                     {{ amplification }}
                 </div>
-                <div class="button-base button-home-zibi">
-                    <button class="button-renting" type="button" onclick="startTalk(0)">
-                        <i class="fa-brands fa-whatsapp fa-fade"></i>
-                        
+                <div class="footer-desc">
+                    <button type="button" class="button-renting" onclick="location.href='#ourequipments'">
+                        <span>לרשימת הציוד</span>
+                        <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="action-btn-leads">
-            <div class="button-base btn-no-phone">
-                <button class="button-renting button-cs" type="button" onmouseleave="remove_anim('for0')" onmouseover="animationCards('for0')" onclick="startTalk(-324234)">
-                    <i class="fa-solid fa-phone fa-fade"></i>
-                </button>
+            <div class="description description-packages">
+                <div class="btn-right btn-no-phone">
+                    <button type="button" class="button-renting btn-right">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                {% for k, pack in packages.items() %}
+                        <div class="package" id="p{{ k }}">
+                            <i class="fa-solid fa-cube"></i>
+                            <div class="title">
+                                <span>{{ pack["n"] }}</span>
+                                
+                            </div>
+                            <div class="desc-package">
+                                <span>{{ pack["d"] }}</span>
+                            </div>
+                            <div class="box-deal-pack mrgn-10">
+                                {% for deal in pack["w"] %}
+                                    <div class="deal-item">
+                                        <i class="fa-regular fa-star"></i>
+                                        <span>{{ deal }}</span>
+                                        
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="package-footer">
+                                <button type="button" class="button-renting" onclick="startTalk(1)">
+                                    <span>הזמן עכשיו</span>
+                                </button>
+                            </div>
+                        </div>
+                {% endfor %}
+                <div class="btn-left btn-no-phone">
+                    <button type="button" class="btn-left button-renting">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+                <div class="arrows-packages button-home-zibi"> 
+                    <button type="button" class="button-renting btn-right">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button type="button" class="btn-left button-renting">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
             </div>
-            <div class="button-base btn-no-phone">
-                <button class="button-renting button-cs" type="button"  onmouseleave="remove_anim('for1')" onmouseover="animationCards('for1')"  onclick="startTalk(0)">
-                     
-                    <i class="fa-brands fa-whatsapp fa-fade"></i>
-                </button>
-            </div>
-        </div>
-
     </div>
     <div class="master-dvir" id="master">
         <div class="title-master-equipment-offer">
@@ -238,7 +245,7 @@
         </div>
     </div>
     <div class="short-contact-fixed">
-        <button  class="btn-short-contact" type="button" onclick="startTalk(-3343)"> 
+        <button  class="btn-short-contact" type="button" onclick="startTalk(1)"> 
             <i class="fa-solid fa-phone"></i>
         </button>
         <button class="btn-short-contact green non-animation" type="button" onclick="startTalk(0)">

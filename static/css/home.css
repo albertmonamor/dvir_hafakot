@@ -106,7 +106,7 @@ body{
 
 .map-and-descripton{
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,10 +116,10 @@ body{
     text-align: center;
     max-width: 45.625rem;
     flex-direction: column;
+    padding-top: 20px;
 }
 .map-and-descripton > .map{
     display: flex;
-    
     justify-content: center;
 
 }
@@ -184,45 +184,171 @@ body{
 }
 
 .after-welcome{
-    margin-top: 2rem;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background: rgb(255, 252, 242);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url(/static/slide-bg.png);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.057);
 }
 
 .main-description{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     justify-content: space-evenly;
-    
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 .description{
-    padding: 30px 10px 30px 10px;
     display: flex;
     border-radius: 6px;
     margin-bottom: 20px;
     margin-top: 10px;
-    /* box-shadow: 0 0 11px 0 rgba(118, 118, 118, 0.276); */
+    position: relative;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.description-packages{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.description:first-child{
+    padding: 10px 3rem 10px 1px;
+}
+.description:last-child{
+    padding: 10px;
+}
+
+.package{
+    background: #101016;
+    border-radius: 20px;
+    width: 450px;
+    border: 1px solid #7e6686;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.157);
-    background: linear-gradient(45deg, rgb(241, 238, 229), rgb(255, 245, 232));
+}
+.package > i{
+    position: absolute;
+    top: -20px;
+    color: #e1d0fb;
+    left: 40%;
+    right: 47%;
+    font-size: 2rem;
+    text-shadow: 0 0 11px  #e1d0fb;
+}
+
+
+.package > .title{
+    font-size: 2.7rem;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #c300ff, #7cd1ff);
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.package > .title > span::after{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    width: 60%;
+    left: 20%;
+    background: linear-gradient(to right, #c300ff, #7cd1ff);
+    height: 1px;
+    border-radius:50%;
+}
+
+.box-deal-pack{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    flex-direction: column;
+
+}
+.deal-item{
+    color: aliceblue;
+    padding: 10px;
+}
+.deal-item > span{
+    color: aliceblue;
+}
+.deal-item > i{
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #c300ff, #7cd1ff);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.package-footer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+    padding: 10px;
+    /* background: linear-gradient(to right, #c300ff8a, #7cd1ff7b); */
+    border-radius: 0 0 20px 20px;
     
+}
+.package-footer > .button-renting{
+    background:  linear-gradient(to right, #6403a9, #d000cd);
+}
+.arrows-packages{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-right, .btn-left{
+    font-size: 1rem !important;
+    border-radius: 50% !important;
+}
+.btn-left > i{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+.btn-left.button-renting > i{
+    opacity: 1;
+}
+.btn-right.button-renting > i{
+    opacity: 1 ;
 }
 
 .description > .title{
     display: flex;
     padding: 10px;
     align-items: end;
+
 }
 .description > .title > span{
     font-size:50px;
-    text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.541);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #c300ff, #7cd1ff);
     padding: 10px 10px 0px 10px;
 }
 
+.desc-package{
+    margin-top: 4rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: center;
+    color: #e1d0fb;
+
+}
 .description > .title > img{
     width: 50px;
     height: 50px;
@@ -246,7 +372,7 @@ body{
     background: rgba(112, 112, 112, 0.381);
     font-size: 40px;
     color: #194fcd;
-    padding: 15px;
+    padding: 10px;
     animation: paddingout 1s ;
     
 }
@@ -263,13 +389,22 @@ body{
 .desc{
     font-size: 18px;
     max-width: 400px;
-    line-break:loose;
+    line-break:auto;
+    color: #e1d0fb;
     line-height: 30px;
     padding: 1rem;
+    margin-top: 2.5rem;
+
+}
+.footer-desc{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: right;
+
 }
 
 .button-renting{
-    background: linear-gradient(to right, #896c49, #aa6a1b);
+    background: linear-gradient(to right, #7e239a, #41bcff);
     border: none;
     color: aliceblue;
     padding: 15px;
@@ -279,15 +414,21 @@ body{
     cursor: pointer;
     position: relative;
     transition: 300ms;
-    box-shadow: 0 0 15px 5px #b08b5d9d; 
 }
-
+.button-renting > i{
+    opacity: 0.01;
+    transition: 300ms;
+}
+.button-renting:hover > i{
+    display: inline;
+    opacity: 0.8;
+}
 
 
 .button-renting:hover,
 .button-renting:active {
-    background: linear-gradient(to left, #c07314, #ce9754);
-
+    background: linear-gradient(to right, #622874, #3185b2);
+    box-shadow:.5px .8px 1.3px hsl(var(--shadow-color)/.12),2px 3.4px 5.3px -.3px hsl(var(--shadow-color)/.21),4.3px 7.2px 11.3px -.7px hsl(var(--shadow-color)/.31),9.3px 15.6px 24.5px -1px hsl(var(--shadow-color)/.4);
 }
 .button-base{
     display: flex;
@@ -329,8 +470,6 @@ body{
 
 .master-dvir{
     background: rgb(255, 252, 252);
-    /* border-top-left-radius: 7px;
-    border-top-right-radius: 7px; */
     box-shadow: 0 0 11px 0 rgba(171, 171, 171, 0.381);
     border: 1px solid rgba(209, 198, 42, 0.251);
     padding: 10px;
@@ -372,7 +511,7 @@ body{
     justify-content: space-around;
     padding: 1.5rem;
     margin-top: .75rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .parent-box{
@@ -621,9 +760,16 @@ body{
     }
     .logo{
         position:sticky;
+        display: none;
     }
     .welcome{
+        top: 0;
+        width: 100%;
+        position: fixed;
         padding-bottom: 0px;
+        z-index: -1;
+        padding-bottom: 5rem;
+
     }
     .welcome-title{
         font-size: 38px;
@@ -636,9 +782,14 @@ body{
         margin-right: 0%;
     }
     .map-and-descripton{
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-top: 10rem;
+        padding-bottom: 5rem;
+        background-color: rgb(249, 246, 236);
+        border-top-right-radius: 15%;
+        border-top-left-radius: 15%;
+        box-shadow: -3px -15px 11px 0 rgba(0, 0, 0, 0.157);
     }
+
     .map-item{
         padding: 0.75rem;
     }
@@ -653,7 +804,11 @@ body{
         height: 80px;
     }
     .main-description{
-        display: block;
+        display: grid;
+        grid-template-columns:none;
+        grid-template-rows: 1fr 1fr;
+        row-gap:5rem;
+        
         
     }
     .description{
@@ -661,6 +816,20 @@ body{
         align-items: center;
         justify-content: space-between;
     }
+    .description:first-child{
+        padding: 10px;
+    }
+    .description-packages{
+        flex-direction: column;
+        align-items: auto;
+        justify-content: auto;
+
+    }
+    .package{
+        width: 100%;
+    }
+
+
     .description > .title{
         margin-bottom: 30px;
         margin-right: 0px;
@@ -682,12 +851,17 @@ body{
         
     }
     .button-home-zibi{
-        display: block;
+        display:inherit;
     }
     .button-renting{
         width: 100%;
     }
-    
+    .btn-right, .btn-left{
+        width: auto !important;
+    }
+    .btn-right > i, .btn-left > i{
+        padding: 5px !important;
+    }
     .button-renting > i{
         position: inherit;
         padding-right: 10px;

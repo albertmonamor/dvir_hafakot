@@ -18,7 +18,8 @@ def home():
     return render_template("home.html",
                            amplification=render_template("/texts/amplification.txt"),
                            production=render_template("/texts/production.txt"),
-                           img_text=IMG_EQUIP_TEXTS)
+                           img_text=IMG_EQUIP_TEXTS,
+                           packages=EQUIP_DEAL_PACKAGE)
 
 @app.route("/contact")
 def contact():
