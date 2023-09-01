@@ -85,12 +85,13 @@
             </div>
             <div class="description description-packages">
                 <div class="btn-right btn-no-phone">
-                    <button type="button" class="button-renting btn-right">
+                    <button type="button" class="button-renting btn-right" onclick="arrow_to(1)">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
-                {% for k, pack in packages.items() %}
-                        <div class="package" id="p{{ k }}">
+                <div class="slide-packages" id="slide-package">
+                    {% for k, pack in packages.items() %}
+                        <div class="package" id="p{{ k }}" tabindex="{{ k }}">
                             <i class="fa-solid fa-cube"></i>
                             <div class="title">
                                 <span>{{ pack["n"] }}</span>
@@ -114,21 +115,23 @@
                                 </button>
                             </div>
                         </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
                 <div class="btn-left btn-no-phone">
-                    <button type="button" class="btn-left button-renting">
+                    <button type="button" class="btn-left button-renting" onclick="arrow_to(0)">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
                 <div class="arrows-packages button-home-zibi"> 
-                    <button type="button" class="button-renting btn-right">
+                    <button type="button" class="button-renting btn-right" onclick="arrow_to(1)">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
-                    <button type="button" class="btn-left button-renting">
+                    <button type="button" class="btn-left button-renting" onclick="arrow_to(0)">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
             </div>
+        </div>
     </div>
     <div class="master-dvir" id="master">
         <div class="title-master-equipment-offer">

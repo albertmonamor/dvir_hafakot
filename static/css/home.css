@@ -208,6 +208,30 @@ body{
     justify-content: space-between;
     border-radius: 10px;
 }
+.slide-packages{
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    overflow-x: scroll;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 453px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 1px;
+    padding-right: 0;
+}
+.slide-packages > *:not(:last-child){
+    margin-left: 2rem;
+}
+
+.slide-packages::-webkit-scrollbar,
+.slide-packages::-webkit-scrollbar-thumb,
+.slide-packages::-webkit-scrollbar-track {
+    display: none;
+}
+
 .description-packages{
     flex-direction: row;
     justify-content: space-evenly;
@@ -221,9 +245,11 @@ body{
 }
 
 .package{
+    min-width: 450px;
     background: #101016;
     border-radius: 20px;
-    width: 450px;
+    scroll-snap-align:start;
+    flex-shrink: 0;
     border: 1px solid #7e6686;
     position: relative;
     display: flex;
@@ -259,10 +285,24 @@ body{
     content: "";
     bottom: -20px;
     width: 60%;
-    left: 20%;
+    right: 20%;
     background: linear-gradient(to right, #c300ff, #7cd1ff);
     height: 1px;
     border-radius:50%;
+    animation: lineslow2 4s ease-in-out 500ms infinite;
+
+}
+@keyframes lineslow2 {
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 
 .box-deal-pack{
@@ -274,7 +314,7 @@ body{
 }
 .deal-item{
     color: aliceblue;
-    padding: 10px;
+    padding: 5px;
 }
 .deal-item > span{
     color: aliceblue;
@@ -290,8 +330,6 @@ body{
 }
 
 .package-footer{
-    display: flex;
-    justify-content: center;
     position: relative;
     margin-top: 2rem;
     padding: 10px;
@@ -301,6 +339,7 @@ body{
 }
 .package-footer > .button-renting{
     background:  linear-gradient(to right, #6403a9, #d000cd);
+    width: 100%;
 }
 .arrows-packages{
     width: 100%;
@@ -342,11 +381,36 @@ body{
 }
 
 .desc-package{
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     margin-right: 20%;
     margin-left: 20%;
     text-align: center;
     color: #e1d0fb;
+    position: relative;
+
+}
+.desc-package > span::after{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(to right, #c300ff, #7cd1ff);
+    height: 1px;
+    border-radius:50%;
+    animation: lineslow 4s ease-in-out 500ms infinite;
+}
+
+@keyframes lineslow {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
 
 }
 .description > .title > img{
@@ -826,7 +890,7 @@ body{
 
     }
     .package{
-        width: 100%;
+        min-width: 100%;
     }
 
 
